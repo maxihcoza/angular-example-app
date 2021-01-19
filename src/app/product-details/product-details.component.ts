@@ -5,7 +5,6 @@ import { products } from "../products";
 //maxihcoza - import for setting up ProductDetailsComponent to use the cart service to add a product to the cart
 import { CartService } from '../cart.service';
 
-
 @Component({
   selector: "app-product-details",
   templateUrl: "./product-details.component.html",
