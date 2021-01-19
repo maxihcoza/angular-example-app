@@ -1,6 +1,6 @@
-<p>
-  <!--maxihcoza - button appears if the product is over $700-->
-  <button *ngIf="product.price > 700">
+<p *ngIf="product.price > 700">
+  <!--maxihcoza - button appears if the product is over $700 - updated with an event binding to call a method-->
+  <button (click)="notify.emit()">
     Notify Me
   </button>
 </p>
