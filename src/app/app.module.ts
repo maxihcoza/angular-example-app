@@ -12,6 +12,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { CartComponent } from './cart/cart.component';
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent }, //maxihcoza - added a route for product details
       { path: 'cart', component: CartComponent }, //maxihcoza - added a route for the cart
+      { path: 'shipping', component: ShippingComponent }, //maxihcoza - added a route for shipping data
     ])
   ],
   declarations: [
@@ -30,7 +32,8 @@ import { CartComponent } from './cart/cart.component';
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    ShippingComponent
   ],
   bootstrap: [
     AppComponent
