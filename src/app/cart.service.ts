@@ -21,6 +21,11 @@ export class CartService {
     return this.items; //maxihcoza - returns an emtpy array of items, which empties the cart
   }
 
+  //maxihcoza - define method to get shipping data using HTTP client
+  getShippingPrices() {
+    return this.http.get('/assets/shipping.json');
+  }
+
   constructor(
     private http: HttpClient //maxihcoza - inject HTTP client into the cart service
   ) { }
