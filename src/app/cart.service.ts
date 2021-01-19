@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+//maxihcoza - import for enabling the app to fetch data and interact with external APIs and resources
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class CartService {
@@ -11,14 +13,16 @@ export class CartService {
   }
 
   getItems() {
-    return this.items; //collects the items users add to the cart and returns each item with its associated quantity
+    return this.items; //maxihcoza - collects the items users add to the cart and returns each item with its associated quantity
   }
 
   clearCart() {
     this.items = [];
-    return this.items; //reurns an emtpy array of items, which empties the cart
+    return this.items; //maxihcoza - returns an emtpy array of items, which empties the cart
   }
 
-  constructor() { }
+  constructor(
+    private http: HttpClient //maxihcoza - inject HTTP client into the cart service
+  ) { }
 
 }
