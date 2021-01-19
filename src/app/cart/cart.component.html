@@ -1,6 +1,12 @@
 <!---maxihcoza - updated to display each of the cart items with its name and price-->
 <h3>Cart</h3>
 
+<p>
+  <a routerLink="/shipping">
+    Shipping Prices
+  </a>
+</p>
+
 <div class="cart-item" *ngFor="let item of items">
   <span>
     {{ item.name }}
